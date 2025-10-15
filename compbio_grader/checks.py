@@ -24,7 +24,7 @@ _HIDDEN_TESTS = [
     ("ATATATATAT", "ATA", 4),
     ("GCCGCCGCC",  "GCC", 3),
     ("AAAAAA",     "AA",  5),
-    ("CGCGCGCG",   "GCG", 0),
+    ("CGCGCGCG",   "GCG", 3),
 ]
 
 def check_patterncount(fn: Callable[[str, str], int]) -> Tuple[bool, str]:
