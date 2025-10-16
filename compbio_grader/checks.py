@@ -272,7 +272,7 @@ _HIDDEN_PATTERNMATCHING: List[Tuple[str, str, List[int]]] = [
     ("ACACACAC", "ACAC", [0, 2, 4]),              # overlaps
     ("CCCC", "CCC", [0, 1]),                      # edge overlap
     ("AGTCAGTC", "AGT", [0, 4]),                  # simple repeats
-    ("AGTCAGTC", "GTCA", [1, 5]),                 # offset repeat
+    ("AGTCAGTCA", "GTCA", [1, 5]),                 # offset repeat
     ("AGTCAGTC", "AAAA", []),                     # no matches
     ("A", "A", [0]),                              # single-character match
     ("", "A", []),                                # empty DNA
