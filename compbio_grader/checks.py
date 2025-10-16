@@ -252,7 +252,7 @@ def check_reversecomplement(fn: Callable[[str], str]) -> Tuple[bool, str]:
         return False, ""
 
     # Award one random letter (use helper that avoids repeats)
-    letter = _award_random_letter()
+    letter = _SHUFFLED[4] if len(_SHUFFLED) > 4 else ""
     print(f"✅ All hidden tests passed! Awarded letter: {letter}")
     return True, letter
 
