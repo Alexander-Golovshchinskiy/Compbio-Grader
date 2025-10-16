@@ -1,2 +1,2 @@
-from .checks import check_patterncount
+from .checks import check_patterncount, check_frequencytable
 
