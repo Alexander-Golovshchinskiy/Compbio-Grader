@@ -106,3 +106,44 @@ def check_frequencytable(fn: Callable[[str, int], Dict[str, int]]):
     print(f"✅ All hidden tests passed! Awarded letter: {letter}")
     return True, letter
 
+# ----- Exercise 3: MaxMap -----
+
+from typing import Dict, Callable, Tuple, List
+
+def _ref_maxmap(freqMap: Dict[str, int]) -> int:
+    """Reference implementation."""
+    if not freqMap:
+        return 0
+    return max(freqMap.values())
+
+# A mix of edge & tricky valid cases.
+_HIDDEN_MAXMAP: List[Dict[str, int]] = [
+    {"A": 10, "B": 2, "C": 5},        # simple
+    {"AA": 1, "BB": 1, "CC": 1},      # all equal
+    {},                               # empty dict
+    {"X": -5, "Y": -2, "Z": -10},     # negative values
+    {"A": 9999999},                   # single key
+    {f"K{i}": i for i in range(1000)}, # large dict
+]
+
+def check_maxmap(fn: Callable[[Dict[str, int]], int]) -> Tuple[bool, str]:
+    """
+    Run hidden tests for MaxMap.
+    Returns (passed: bool, awarded_letter: str)
+    """
+    try:
+        for freq in _HIDDEN_MAXMAP:
+            result = fn(dict(freq))  # copy to avoid mutation
+            expected = _ref_maxmap(freq)
+            if result != expected:
+                print(f"❌ Mismatch for input {list(freq.items())[:3]}... → expected {expected}, got {result}")
+                return False, ""
+    except Exception as e:
+        print(f"❌ Error during hidden check: {e}")
+        return False, ""
+
+    # One exercise = one letter (index 2 for Exercise 3)
+    letter = _SHUFFLED[2] if len(_SHUFFLED) > 2 else ""
+    print(f"✅ All hidden tests passed! Awarded letter: {letter}")
+    return True, letter
+
