@@ -1,2 +1,2 @@
-from .checks2 import check_skew
+from .checks2 import check_skew, check_minimumskew, check_approximatepatterncount, check_neighbors, check_frequentwordsapproximate, check_frequentwords_approx_with_rc, check_ecoli_ori
 
