@@ -1,5 +1,5 @@
 
-from typing import Iterable, List, Tuple, Union
+from typing import Iterable, List, Tuple, Union, Callable
 import os
 import random
 
