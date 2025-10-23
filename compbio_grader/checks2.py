@@ -150,7 +150,7 @@ def check_approximatepatterncount(fn: Callable[[str, str, int], int], *, award_l
             return False, ""
 
     print("✅ All hidden tests passed!")
-    return (True, letter_for_exercise(4)) if award_letter else (True, "")
+    return (True, letter_for_exercise(2)) if award_letter else (True, "")
 
 # ===== Add to compbio_grader/checks2.py — Hidden Tests for Neighbors =====
 
@@ -211,7 +211,7 @@ def check_neighbors(fn, *, award_letter: bool = True):
             return False, ""
 
     print("✅ All hidden Neighbors tests passed!")
-    return (True, letter_for_exercise(5)) if award_letter else (True, "")
+    return (True, letter_for_exercise(3)) if award_letter else (True, "")
 
 # ===== Add to compbio_grader/checks2.py — Hidden Tests for FrequentWordsApproximate =====
 
@@ -279,7 +279,7 @@ def check_frequentwordsapproximate(fn: Callable[[str, int, int], List[str]], *, 
             return False, ""
 
     print("✅ All hidden FrequentWordsApproximate tests passed!")
-    return (True, letter_for_exercise(6)) if award_letter else (True, "")
+    return (True, letter_for_exercise(4)) if award_letter else (True, "")
 
 # ===== Add to compbio_grader/checks2.py — Hidden Tests for FrequentWordsApproximateWithRC =====
 
@@ -355,7 +355,7 @@ def check_frequentwords_approx_with_rc(fn: Callable[[str, int, int], List[str]],
             return False, ""
 
     print("✅ All hidden FrequentWordsApproximateWithRC tests passed!")
-    return (True, letter_for_exercise(7)) if award_letter else (True, "")
+    return (True, letter_for_exercise(5)) if award_letter else (True, "")
 
 # ==============================
 # EXERCISE 7 — Hidden check for E. coli ori window (k=9, d=1)
