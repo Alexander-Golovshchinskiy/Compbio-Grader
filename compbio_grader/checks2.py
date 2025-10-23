@@ -22,7 +22,7 @@ def shuffled_word() -> str:
 
 def letter_for_exercise(index: int) -> str:
     """Return the letter assigned to exercise index (0-based)."""
-    return _SHUFFLED[index % len(_SHUFFLED)]
+    return _SHUFFLED[index]
 
 # ----------  REFERENCE SOLUTION ----------
 _EXERCISE_GENOME = "GAGCCACCGCGATA"
