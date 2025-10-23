@@ -130,8 +130,8 @@ _HIDDEN_TESTS_EX5 = [
     ("AACAAGCTGATAAACATTTAAAGAG", "AAAAA", 1, 4),       # from description
     ("AAAAA", "AAAAA", 0, 1),                           # exact match
     ("AAAAAA", "AAA", 0, 4),                            # overlapping
-    ("AAAAAA", "AAA", 1, 6),                            # mismatches allowed
-    ("ACGTACGTACGT", "ACG", 1, 6),
+    ("AAAAGAT", "AAA", 1, 4),                            # mismatches allowed
+    ("ACGTACGAAGGG", "ACG", 2, 5),
 ]
 
 def check_approximatepatterncount(fn: Callable[[str, str, int], int], *, award_letter: bool = True):
