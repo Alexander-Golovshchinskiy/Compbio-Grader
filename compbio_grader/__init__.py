@@ -1,2 +1,2 @@
 from .checks2 import check_skew, check_minimumskew, check_approximatepatterncount, check_neighbors, check_frequentwordsapproximate, check_frequentwords_approx_with_rc, check_ecoli_ori
-
+from .checks import check_patterncount, check_frequencytable, check_maxmap, check_frequentwords, check_reversecomplement, check_patternmatching, check_genome_scan, check_ecoli_clumps_count
