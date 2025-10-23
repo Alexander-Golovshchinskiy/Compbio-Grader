@@ -42,7 +42,6 @@ def check_patterncount(fn: Callable[[str, str], int]) -> Tuple[bool, str]:
             return False, ""
     # success
     letter = _SHUFFLED[0]  # the 1st letter in the shuffled word
-    print(f"✅ All hidden tests passed! You earned letter: {letter}")
     return True, letter
 
 # Optional helpers (if you ever need them)
@@ -103,7 +102,6 @@ def check_frequencytable(fn: Callable[[str, int], Dict[str, int]]):
 
     # One exercise = one letter (use index 1 for exercise #2)
     letter = _SHUFFLED[1] if len(_SHUFFLED) > 1 else ""
-    print(f"✅ All hidden tests passed! Awarded letter: {letter}")
     return True, letter
 
 # ----- Exercise 3: MaxMap -----
@@ -144,7 +142,6 @@ def check_maxmap(fn: Callable[[Dict[str, int]], int]) -> Tuple[bool, str]:
 
     # One exercise = one letter (index 2 for Exercise 3)
     letter = _SHUFFLED[2] if len(_SHUFFLED) > 2 else ""
-    print(f"✅ All hidden tests passed! Awarded letter: {letter}")
     return True, letter
 
 # ----- Exercise 4: FrequentWords -----
@@ -206,7 +203,6 @@ def check_frequentwords(fn: Callable[[str, int], List[str]]):
 
     # One exercise = one letter (index 3 for exercise #4)
     letter = _SHUFFLED[3] if len(_SHUFFLED) > 3 else ""
-    print(f"✅ All hidden tests passed! Awarded letter: {letter}")
     return True, letter
 
 # ----- Exercise 5: ReverseComplement -----
@@ -253,7 +249,6 @@ def check_reversecomplement(fn: Callable[[str], str]) -> Tuple[bool, str]:
 
     # Award one random letter (use helper that avoids repeats)
     letter = _SHUFFLED[4] if len(_SHUFFLED) > 4 else ""
-    print(f"✅ All hidden tests passed! Awarded letter: {letter}")
     return True, letter
 
 # ----- Exercise 6: PatternMatching -----
@@ -296,7 +291,6 @@ def check_patternmatching(fn: Callable[[str, str], List[int]]):
 
     # one exercise = one letter (index 5 for Exercise 6)
     letter = _SHUFFLED[5] if len(_SHUFFLED) > 5 else ""
-    print(f"✅ All hidden tests passed! Awarded letter: {letter}")
     return True, letter
 
 # ----- Exercise 7: Genome-scale scan (fixed expected answer, two-letter award) -----
@@ -370,7 +364,6 @@ def check_genome_scan(fn: Callable[..., Union[str, List[int]]]):
     l1 = _SHUFFLED[6] if len(_SHUFFLED) > 6 else ""
     l2 = _SHUFFLED[7] if len(_SHUFFLED) > 7 else ""
     letters = [l for l in (l1, l2) if l]
-    print(f"✅ All checks passed! Awarded letters: {' '.join(letters)}")
     return True, letters
 
 # ----- Final scaled exercise: E. coli (9-mers forming (500,3)-clumps) -----
@@ -422,6 +415,5 @@ def check_ecoli_clumps_count(fn: Callable[[], Union[int, str]]):
     ltrs = []
     if len(_SHUFFLED) > 8: ltrs.append(_SHUFFLED[8])
     if len(_SHUFFLED) > 9: ltrs.append(_SHUFFLED[9])
-    print(f"✅ Correct! Awarded letters: {' '.join(ltrs)}")
     return True, ltrs
 
